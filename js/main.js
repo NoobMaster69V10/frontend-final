@@ -108,22 +108,32 @@ function validate_input(){
 
 
     if(title.value.length < 8){
+        title.style.borderColor = "#FF0000";
+        title.style.outlineColor = "#FF0000";
         titleValidation.style.display = "inline";
     }
 
     if(description.value.length < 8){
+        description.style.borderColor = "#FF0000";
+        description.style.outlineColor = "#FF0000";
         descriptionValidation.style.display = "inline";
     }
 
     if(category.value == ""){
+        category.style.borderColor = "#FF0000";
+        category.style.outlineColor = "#FF0000";
         categoryValidation.style.display = "inline";
     }
 
     if(editorFirstName.value.length < 2){
+        editorFirstName.style.borderColor = "#FF0000";
+        editorFirstName.style.outlineColor = "#FF0000";
         firstnameValidation.style.display = "inline";
     }
 
     if(editorLastName.value.length < 2){
+        editorLastName.style.borderColor = "#FF0000";
+        editorLastName.style.outlineColor = "#FF0000";
         lastnameValidation.style.display = "inline";
     }
 
@@ -131,45 +141,65 @@ function validate_input(){
     title.addEventListener("input", (e) => {
 
         if (title.value.length < 8){
+            title.style.borderColor = "#FF0000";
+            title.style.outlineColor = "#FF0000";
             titleValidation.style.display = "inline";
         }
         else{
+            title.style.borderColor = "#07070740";
+            title.style.outlineColor = "#000";
             titleValidation.style.display = "none";
         }
     });
 
     description.addEventListener("input", (e) => {
         if (description.value.length < 8){
+            description.style.borderColor = "#FF0000";
+            description.style.outlineColor = "#FF0000";
             descriptionValidation.style.display = "inline";
         }
         else{
+            description.style.borderColor = "#07070740";
+            description.style.outlineColor = "#000";
             descriptionValidation.style.display = "none";
         }
     });
 
     category.addEventListener("change", (e) => {
         if (category.value.length == ""){
+            category.style.borderColor = "#FF0000";
+            category.style.outlineColor = "#FF0000";
             categoryValidation.style.display = "inline";
         }
         else{
+            category.style.borderColor = "#07070740";
+            category.style.outlineColor = "#000";
             categoryValidation.style.display = "none";
         }
     });
 
     editorFirstName.addEventListener("input", (e) => {
         if (editorFirstName.value.length < 2){
+            editorFirstName.style.borderColor = "#FF0000";
+            editorFirstName.style.outlineColor = "#FF0000";
             firstnameValidation.style.display = "inline";
         }
         else{
+            editorFirstName.style.borderColor = "#07070740";
+            editorFirstName.style.outlineColor = "#000";
             firstnameValidation.style.display = "none";
         }
     });
 
     editorLastName.addEventListener("input", (e) => {
         if (editorLastName.value.length < 2){
+            editorLastName.style.borderColor = "#FF0000";
+            editorLastName.style.outlineColor = "#FF0000";
             lastnameValidation.style.display = "inline";
         }
         else{
+            editorLastName.style.borderColor = "#07070740";
+            editorLastName.style.outlineColor = "#000";
             lastnameValidation.style.display = "none";
         }
     });
