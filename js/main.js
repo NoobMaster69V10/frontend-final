@@ -269,23 +269,25 @@ async function update_news(){
     const editorFirstName = document.getElementById('editorFirstName');
     const editorLastName = document.getElementById('editorLastName');
     
-    const apiURL = "https://btu-exam-cb6c3fdf3b9d.herokuapp.com/news/" + news_id;
+    if(validate_input()){
+        const apiURL = "https://btu-exam-cb6c3fdf3b9d.herokuapp.com/news/" + news_id;
     
-    const response = await fetch(apiURL, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: title.value,
-          description: description.value,
-          category: category.value,
-          editorFirstName: editorFirstName.value,
-          editorLastName: editorLastName.value,
-        }),
-    });
+        const response = await fetch(apiURL, {
+            method: "PUT",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            title: title.value,
+            description: description.value,
+            category: category.value,
+            editorFirstName: editorFirstName.value,
+            editorLastName: editorLastName.value,
+            }),
+        });
 
-    window.location.href = 'index.html';
+        window.location.href = 'index.html';
+    }
 }
 
 async function add_to_form(){
